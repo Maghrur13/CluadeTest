@@ -37,3 +37,19 @@ Everything lives in one file (`tictactoe.html`):
 Repository: https://github.com/Maghrur13/CluadeTest
 
 Auto-commit hook is active — every file Write/Edit is automatically committed and pushed to GitHub.
+
+## Commit Message Rules
+Every change must be committed with a clear, descriptive message. Never use vague messages like "auto: update files" when making intentional changes — override the auto-hook by committing manually with:
+
+```bash
+git add -A && git commit -m "type: short description of what changed and why" && git push
+```
+
+Commit message format:
+- `feat: add X` — new feature or functionality
+- `fix: correct X` — bug fix
+- `style: update X` — visual/CSS changes
+- `refactor: restructure X` — code reorganization, no behavior change
+- `content: update X` — text or asset changes
+
+Always push immediately after committing so GitHub always reflects the latest state.
