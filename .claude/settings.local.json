@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where tesseract:*)",
+      "Read(//c/Program Files/**)",
+      "Bash(cd \"C:\\\\Users\\\\User\\\\Desktop\\\\CluadeTest\\\\financial_analysis\" && PYTHONUTF8=1 python main.py \"../Azərişıq 2024 hesabat.pdf\" --word 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\User\\\\Desktop\\\\CluadeTest\\\\financial_analysis\" && PYTHONUTF8=1 python -c \"\nfrom pathlib import Path\nfrom extract_pdf import extract_financial_data\nfrom ratios import calculate_all_ratios\nfrom export_excel import export_to_excel\nfrom export_word import export_to_word\n\npdf = Path\\(r'C:\\\\Users\\\\User\\\\Desktop\\\\CluadeTest\\\\Azərişıq 2024 hesabat.pdf'\\)\nprint\\('PDF exists:', pdf.exists\\(\\)\\)\ndata = extract_financial_data\\(pdf\\)\nprint\\('Extracted data:', data\\)\nratios = calculate_all_ratios\\(data\\)\nprint\\('Ratios:', ratios\\)\nxlsx = Path\\(r'C:\\\\Users\\\\User\\\\Desktop\\\\CluadeTest\\\\Azərişıq 2024 hesabat_analysis.xlsx'\\)\ndocx = Path\\(r'C:\\\\Users\\\\User\\\\Desktop\\\\CluadeTest\\\\Azərişıq 2024 hesabat_analysis.docx'\\)\nexport_to_excel\\(data, ratios, xlsx, company_name='Azərişıq 2024'\\)\nexport_to_word\\(data, ratios, docx, company_name='Azərişıq 2024'\\)\nprint\\('Done! Reports saved.'\\)\n\" 2>&1)"
+    ]
+  }
+}
